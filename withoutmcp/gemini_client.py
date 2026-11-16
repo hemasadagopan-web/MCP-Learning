@@ -2,7 +2,9 @@
 from google import genai
 from tool_executor import execute_tool
 
-client = genai.Client(api_key="")
+client = genai.Client(
+    api_key=""
+    )
 
 tools = [{
     "function_declarations": [
@@ -69,7 +71,7 @@ tools = [{
 def chat(prompt):
 
     response = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-3.5-flash-lite",
         contents=prompt,
         config={
             "tools": tools
@@ -94,4 +96,5 @@ def chat(prompt):
             print(part.text)
 
 
-chat("Insert a new person named John, gender Male, country USA")
+chat("Insert a new person named Pradheep, gender Male, country Sweden")
+chat("select all names from the table")
