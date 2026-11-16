@@ -11,7 +11,7 @@ conn = pyodbc.connect(
 
 cursor = conn.cursor()
 
-cursor.execute("SELECT top (100) cst_id FROM bronze.crm_cust_info")
+cursor.execute("SELECT * FROM dbo.details")
 
 for row in cursor.fetchall():
     print(row)
