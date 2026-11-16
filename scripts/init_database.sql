@@ -39,3 +39,10 @@ FOR LOGIN [IKEA\HESAD];
 ALTER ROLE db_datareader
 ADD MEMBER [IKEA\HESAD];
 
+USE customers;
+GO
+--Grant Read Write to the table
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON dbo.details
+TO [IKEA\HESAD];
+GO
