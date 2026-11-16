@@ -25,4 +25,17 @@ CREATE TABLE details (
     country VARCHAR(100)
 );
 
+--To Insert Sample data
+Insert into details values ('Ashwath','M','Sweden')
+Insert into details values ('Shrinithi','Y','India')
+
+
+--Grant read access to Windows User
+USE customers;
+
+CREATE USER [IKEA\HESAD]
+FOR LOGIN [IKEA\HESAD];
+
+ALTER ROLE db_datareader
+ADD MEMBER [IKEA\HESAD];
 
