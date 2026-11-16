@@ -2,7 +2,7 @@
 from google import genai
 from tool_executor import execute_tool
 
-client = genai.Client(api_key="YOUR_GEMINI_API_KEY")
+client = genai.Client(api_key="AQ.Ab8RN6KCQdRA4X7lK7QV-9zDTy9uNVTTrDvsaN0VccmgX9WEQg")
 
 tools = [{
     "function_declarations": [
